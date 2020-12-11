@@ -58,23 +58,6 @@ func (d *Doctor) SetNext(handle Department) {
 	d.NextHandle = handle
 }
 
-//药房
-type Pharmacy struct {
-	NextHandle Department //下个部门
-}
-
-func NewPharmacy() Department {
-	return &Pharmacy{}
-}
-func (pharmacy *Pharmacy) Execute(p *patient) {
-	fmt.Println("拿药")
-	pharmacy.NextHandle.Execute(p)
-}
-
-func (pharmacy *Pharmacy) SetNext(handle Department) {
-	pharmacy.NextHandle = handle
-}
-
 //缴费处
 type PaymentOffice struct {
 	NextHandle Department //下个部门
@@ -85,10 +68,28 @@ func NewPaymentOffice() Department {
 }
 func (paymentOffice *PaymentOffice) Execute(p *patient) {
 	fmt.Println("缴费")
+	paymentOffice.NextHandle.Execute(p)
 }
 
 func (paymentOffice *PaymentOffice) SetNext(handle Department) {
 	paymentOffice.NextHandle = handle
+}
+
+//药房
+type Pharmacy struct {
+	NextHandle Department //下个部门
+}
+
+func NewPharmacy() Department {
+	return &Pharmacy{}
+}
+func (pharmacy *Pharmacy) Execute(p *patient) {
+	fmt.Println("拿药")
+
+}
+
+func (pharmacy *Pharmacy) SetNext(handle Department) {
+	pharmacy.NextHandle = handle
 }
 
 //测试责任链模式
@@ -97,15 +98,15 @@ func TestChainResponsibility() {
 	reception := NewReception()
 	//医生
 	doctor := NewDoctor()
-	//药房
-	pharmacy := NewPharmacy()
 	//缴费处
 	paymentOffice := NewPaymentOffice()
+	//药房
+	pharmacy := NewPharmacy()
 	//责任链
-	//药房的下个部门是缴费处
-	pharmacy.SetNext(paymentOffice)
-	//医生的下个部门是药房
-	doctor.SetNext(pharmacy)
+	//缴费处的下个部门是药房
+	paymentOffice.SetNext(pharmacy)
+	//医生的下个部门是缴费处
+	doctor.SetNext(paymentOffice)
 	//接待处的下个部门是医生
 	reception.SetNext(doctor)
 
