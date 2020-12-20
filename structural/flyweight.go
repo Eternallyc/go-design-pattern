@@ -12,6 +12,7 @@ import (
 应用场景：在游戏业务开发的场景中，创建大量相同或相似对象实例的问题
 		例如，游戏业务中的围棋和五子棋中的黑白棋子
 */
+
 //People接口
 type People interface {
 	PrintInfo(info PeopleInfo)
@@ -38,6 +39,7 @@ func (p *Student) PrintInfo(info PeopleInfo) {
 	fmt.Println("name" + info.Name + "\n" + "sex:" + info.Sex)
 }
 
+//享元工厂
 type PeopleFactory struct {
 	p map[string]People
 }
@@ -60,6 +62,7 @@ func (p *PeopleFactory) GetPeople(id string) People {
 	return people
 }
 
+//测试享元模式
 func TestFlyweight() {
 	f := NewPeopleFactory()
 	for i := 0; i < 5; i++ {

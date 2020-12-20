@@ -6,5 +6,7 @@ func main() {
 	//享元模式
 	//structural.TestFlyweight()
 	//责任链模式
-	behavioral.TestChainResponsibility()
+	//behavioral.TestChainResponsibility()
+	//备忘录模式
+	behavioral.TestMemento()
 }
