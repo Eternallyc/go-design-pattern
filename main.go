@@ -1,6 +1,6 @@
 package main
 
-import "go-design-pattern/structural"
+import "go-design-pattern/behavioral"
 
 func main() {
 	//享元模式
@@ -13,5 +13,6 @@ func main() {
 	//creational.TestBuilder()
 
 	//桥接模式
-	structural.TestBridge()
+	//structural.TestBridge()
+	behavioral.TestMediator()
 }
