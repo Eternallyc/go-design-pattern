@@ -26,6 +26,8 @@ type Game struct {
 
 func (g Game) Login(userId, password string) (bool, error) {
 	fmt.Println("校验请求的合法性")
+	fmt.Println("校验帐号是否冻结")
+	fmt.Println("校验帐号数据是否异常")
 	return g.user.Login(userId, password)
 }
 
