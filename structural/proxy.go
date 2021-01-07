@@ -34,5 +34,7 @@ func (g Game) Login(userId, password string) (bool, error) {
 func TestProxy() {
 	user := User{}
 	game := Game{user: user}
-	game.Login("1", "1")
+	if _, err := game.Login("1", "1"); err != nil {
+		panic(err)
+	}
 }
