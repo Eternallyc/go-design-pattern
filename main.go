@@ -15,8 +15,9 @@ func main() {
 	//备忘录模式
 	//behavioral.TestMemento()
 	//策略模式
-	behavioral.TestStrategy()
-
+	//behavioral.TestStrategy()
+	//模版方法模式
+	behavioral.TestTemplate()
 	//创建型
 	//建造者模式
 	//creational.TestBuilder()
