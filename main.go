@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-design-pattern/behavioral"
+	"go-design-pattern/creational"
 	"go-design-pattern/structural"
 )
 
@@ -17,10 +17,13 @@ func main() {
 	//策略模式
 	//behavioral.TestStrategy()
 	//模版方法模式
-	behavioral.TestTemplate()
+	//behavioral.TestTemplate()
+
 	//创建型
 	//建造者模式
 	//creational.TestBuilder()
+	//工厂模式
+	creational.TestFactory()
 
 	//结构型
 	//桥接模式
