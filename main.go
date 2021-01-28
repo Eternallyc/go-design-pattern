@@ -1,6 +1,9 @@
 package main
 
-import "go-design-pattern/structural"
+import (
+	"go-design-pattern/behavioral"
+	"go-design-pattern/structural"
+)
 
 func main() {
 
@@ -11,6 +14,8 @@ func main() {
 	//behavioral.TestMediator()
 	//备忘录模式
 	//behavioral.TestMemento()
+	//策略模式
+	behavioral.TestStrategy()
 
 	//创建型
 	//建造者模式
