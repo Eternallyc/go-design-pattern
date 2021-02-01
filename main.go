@@ -1,8 +1,7 @@
 package main
 
 import (
-	"go-design-pattern/creational"
-	"go-design-pattern/structural"
+	"go-design-pattern/behavioral"
 )
 
 func main() {
@@ -18,12 +17,14 @@ func main() {
 	//behavioral.TestStrategy()
 	//模版方法模式
 	//behavioral.TestTemplate()
+	//测试观察者模式
+	behavioral.TestObserve()
 
 	//创建型
 	//建造者模式
 	//creational.TestBuilder()
 	//工厂模式
-	creational.TestFactory()
+	//creational.TestFactory()
 
 	//结构型
 	//桥接模式
@@ -31,5 +32,5 @@ func main() {
 	//享元模式
 	//structural.TestFlyweight()
 	//代理模式
-	structural.TestProxy()
+	//structural.TestProxy()
 }
