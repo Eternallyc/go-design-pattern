@@ -1,8 +1,6 @@
 package main
 
-import (
-	"go-design-pattern/behavioral"
-)
+import "go-design-pattern/behavioral"
 
 func main() {
 
@@ -18,7 +16,9 @@ func main() {
 	//模版方法模式
 	//behavioral.TestTemplate()
 	//测试观察者模式
-	behavioral.TestObserve()
+	//behavioral.TestObserve()
+	//测试状态模式
+	behavioral.TestState()
 
 	//创建型
 	//建造者模式
