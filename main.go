@@ -15,10 +15,12 @@ func main() {
 	//behavioral.TestStrategy()
 	//模版方法模式
 	//behavioral.TestTemplate()
-	//测试观察者模式
+	//观察者模式
 	//behavioral.TestObserve()
-	//测试状态模式
-	behavioral.TestState()
+	//状态模式
+	//behavioral.TestState()
+	//访问者模式
+	behavioral.TestVisitor()
 
 	//创建型
 	//建造者模式
