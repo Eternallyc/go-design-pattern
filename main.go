@@ -1,6 +1,6 @@
 package main
 
-import "go-design-pattern/behavioral"
+import "go-design-pattern/creational"
 
 func main() {
 
@@ -20,13 +20,15 @@ func main() {
 	//状态模式
 	//behavioral.TestState()
 	//访问者模式
-	behavioral.TestVisitor()
+	//behavioral.TestVisitor()
 
 	//创建型
 	//建造者模式
 	//creational.TestBuilder()
 	//工厂模式
 	//creational.TestFactory()
+	//单例模式
+	creational.TestSingleton()
 
 	//结构型
 	//桥接模式
