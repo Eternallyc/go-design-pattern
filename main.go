@@ -1,6 +1,8 @@
 package main
 
-import "go-design-pattern/behavioral"
+import (
+	"go-design-pattern/other"
+)
 
 func main() {
 
@@ -22,7 +24,7 @@ func main() {
 	//访问者模式
 	//behavioral.TestVisitor()
 	//命令模式
-	behavioral.TestCommand()
+	//behavioral.TestCommand()
 
 	//创建型
 	//建造者模式
@@ -41,4 +43,7 @@ func main() {
 	//structural.TestProxy()
 	//适配器模式
 	//structural.TestAdapter()
+
+	//其他设计模式
+	other.TestNull()
 }
