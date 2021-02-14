@@ -1,6 +1,6 @@
 package main
 
-import "go-design-pattern/creational"
+import "go-design-pattern/structural"
 
 func main() {
 
@@ -28,7 +28,7 @@ func main() {
 	//工厂模式
 	//creational.TestFactory()
 	//单例模式
-	creational.TestSingleton()
+	//creational.TestSingleton()
 
 	//结构型
 	//桥接模式
@@ -37,4 +37,6 @@ func main() {
 	//structural.TestFlyweight()
 	//代理模式
 	//structural.TestProxy()
+	//适配器模式
+	structural.TestAdapter()
 }
